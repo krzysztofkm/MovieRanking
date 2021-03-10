@@ -14,7 +14,7 @@ namespace MovieRatingApplication.Services
     /// </summary>
     public class SwapiService : ISwapiService
     {
-        private const string _serviceAsress = "http://swapi.dev";
+        private const string _serviceAsress = "http://swapi.dev"; //TODO add to a config
         private RestClient _restClient;
 
         public SwapiService()
