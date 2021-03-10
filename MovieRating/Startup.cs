@@ -28,11 +28,13 @@ namespace MovieRatingApplication
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //TODO changed to Sql Server
             services.AddDbContext<MovieRatingContext>(opts => opts.UseSqlite("Data Source=MovieRating.db"));
             services.AddScoped<IMovieRatingRepository, MovieRatingRepository>();
             services.AddScoped<IMovieLogic, MovieLogic>();
             services.AddScoped<ISwapiService, SwapiService>();
             services.AddControllersWithViews();
+            //TODO: add and use logging framework
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
